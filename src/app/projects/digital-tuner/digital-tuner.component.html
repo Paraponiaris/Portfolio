@@ -1,0 +1,169 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">Digital Tuner Embedded System created with Arduino Uno</h1>
+  
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <p>
+        This is my Diploma thesis for my TECHNOLOGICAL EDUCATIONAL INSTITUTE
+        OF EASTERN MACEDONIA AND THRACE
+        FACULTY OF TECHNOLOGICAL APPLICATIONS
+        DEPARTMENT OF COMPUTER ENGINEERING
+        The purpose of this thesis is to develop an embedded system for recognizing audio frequencies and guiding the user 
+        to achieve the desired frequency when tuning a musical instrument. This essentially creates an electronic tuner 
+        for string instruments.
+      </p>
+      <p>
+        The device's core function is to determine the fundamental frequency of the sound produced by the musical 
+        instrument and display this information on a screen. This allows the musician to tune each string to the desired 
+        frequency.
+      </p>
+      <p>
+        The device features a jack input for connecting musical instruments for tuning. The input signal undergoes 
+        appropriate processing through electronic amplification and filtering circuits before being fed into a 
+        microcontroller. The microcontroller then calculates the signal's frequency and identifies the closest 
+        corresponding musical note.
+      </p>
+      <p>
+        The selection of the musical instrument, the tuning mode, and the string to be tuned is done by navigating 
+        through the on-screen menu.
+      </p>
+      <p>
+        Summary 
+        The present thesis describes the development of an electronic tuning device for musical instrument. 
+        The device detects the fundamental frequency of the plucked string and displays it on an LCD 
+        screen, to facilitate the musician with tuning the musical instrument.  
+        The signal from the instruments output plug is processed through appropriate amplification and 
+        filtering stages, and is then fed to a microcontroller which calculates its frequency and the 
+        corresponding musical note. A button on the device is used to select the desired string to be tuned.
+      </p>
+      <p>
+        Here are the materials used for the digital tuner:
+      </p>
+      <ul>
+        <li>Arduino Uno with an integrated ATmega328 microcontroller</li>
+        <li>Non-inverting amplifier</li>
+        <li>4x20 LCD display</li>
+        <li>Speaker</li>
+        <li>Batteries (2x9V and 11.1V)</li>
+        <li>Jack cable input</li>
+        <li>Cables</li>
+        <li>Buttons</li>
+      </ul>
+      <p>
+        Here are the characteristics of the Arduino Uno:
+        Arduino Uno Specifications
+      </p>
+      <ul>
+        <li>Microcontroller: ATmega328</li>
+        <li>Operating Voltage: 5V</li>
+        <li>Input Voltage (recommended): 7-12V</li>
+        <li>Input Voltage (limit): 6-20V</li>
+        <li>Digital I/O Pins: 14 (6 of which provide PWM output)</li>
+        <li>Analog Input Pins: 6</li>
+        <li>DC Current per I/O Pin: 40 mA</li>
+        <li>DC Current for 3.3V Pin: 50 mA</li>
+        <li>Flash Memory: 32 KB (0.5 KB used by the bootloader)</li>
+        <li>SRAM: 2 KB</li>
+        <li>EEPROM: 1 KB</li>
+        <li>Clock Speed: 16 MHz</li>
+      </ul>
+      <p>
+        Arduino platforms feature three primary memory types and two persistent ones:
+      </p>
+      <ul>
+        <li>Flash memory (32 Kbytes): This is where the program to be executed is stored, along with the bootloader, which streamlines the platform's programming process.</li>
+        <li>SRAM memory (static random-access memory of 2 Kbytes): This is used for the temporary storage of static and variable data of the program being executed.</li>
+        <li>EEPROM memory (1 Kbytes): This memory stores variable values even when the platform is turned off. It's used for saving settings and other parameters between Arduino resets.</li>
+        <li>Both Flash memory and EEPROM memory are persistent (their information remains after power is turned off).</li>
+      </ul>
+      <p>
+        The Arduino Uno can communicate with a computer, another Arduino, or other microcontrollers. The ATmega328 
+        microcontroller provides TTL 5 Volt UART serial communication. This is available on pins 0 (RX - receive) and 
+        1 (TX - transmit) of the integrated circuit.
+      </p>
+      <p>
+        Additionally, the Arduino board provides serial communication with the computer for programming. This is 
+        facilitated by a specially programmed integrated ATmega328 chip, rather than an FTDI chip. When the Arduino is 
+        connected via its USB port, it appears as a virtual COM serial port in the computer's software. The ATmega328 
+        firmware utilizes USB COM drivers, meaning no external factor is needed. Therefore, on Windows, only an .inf 
+        file is required.
+      </p>
+      <p>
+        Amplifier
+      </p>
+      <p>
+        To build the system, a non-inverting amplifier was used. Its purpose was to increase the signal's amplitude 
+        from approximately ±200mV to an ideal ±2.5V, and to protect the audio source from the rest of the circuit.
+      </p>
+      <p>
+        Display
+      </p>
+      <p>
+        The display used is a monochromatic 4x20 LCD screen. This is a factory-made HD44780 display with 4 lines and 
+        20 characters, shown in black text on a green background with backlighting.
+      </p>
+      <p>
+        Here are the specifications for the LCD display:
+        LCD Display Specifications
+      </p>
+      <ul>
+        <li>Pixels per Character: 5 x 8</li>
+        <li>Character Width: 3 mm</li>
+        <li>Number of Rows: 4</li>
+        <li>Characters per Row: 20</li>
+        <li>Maximum Backlight Current Consumption: 240 mA</li>
+        <li>Maximum Current Consumption: 3 mA</li>
+      </ul>
+      <p>
+        System Development Language
+      </p>
+      <p>
+        The programming language chosen for system development is Wiring C. This is essentially a modified version of C, 
+        adapted to specific needs. It includes a bootloader that enables new code to be uploaded without the need for an 
+        external programmer. Communication occurs using the original STK500 development board protocol. The software 
+        development environment is based on the Processing and Wiring programming languages, both of which are 
+        open-source.
+      </p>
+      <p>
+        Operation Controls
+      </p>
+      <p>
+        This user-friendly instrument tuner offers three different tuning modes and various instrument selections, 
+        making it possible to tune any instrument in the easiest way possible.
+      </p>
+      <p>
+        Arduino Uno Microprocessor-Based Tuning Device
+      </p>
+      <p>
+        Here's a breakdown of the components and their functions:
+      </p>
+      <ul>
+        <li>On/Off Switch: This switch activates and deactivates the system.</li>
+        <li>4x20 LCD Display: This is the screen used for displaying information.</li>
+        <li>Jack Input: This is the socket for connecting the musical instrument cable.</li>
+        <li>Speaker: This component provides audio output.</li>
+        <li>Buttons: The buttons facilitate user interaction, though their specific functions are not detailed here.</li>
+      </ul>
+      <p>
+        Technical Data
+      </p>
+      <ul>
+        <li>Input Connection: 6.3 mm, mono jack, Impedance: 500 kΩ</li>
+        <li>Output Connection: 6.3 mm, mono jack, Impedance: 1 kΩ</li>
+        <li>Power Supply: 9V, 100mA adapter</li>
+        <li>Battery: 9V type 6LR61</li>
+        <li>Power Consumption: 70mA</li>
+        <li>Dimensions (H x W x D): Approximately 2cm x 20cm x 10cm</li>
+        <li>Weight: Approximately 0.50 kg</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+      <div class="card shadow">
+        <img [src]="'assets/images/projects/digital-tuner/' + i + '.PNG'" class="card-img-top">
+      </div>
+    </div>
+  </div>
+</div>

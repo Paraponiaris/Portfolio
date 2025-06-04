@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">Andrew Complainer a static Musical Website</h1>
+  
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <p>
+        This is a simple website I created long time ago helping an artist advertise himself through his personal website.
+      </p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <h2 class="mb-4">Skills:</h2>
+      <p>HTML5, CSS3, PHP</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6" *ngFor="let i of [1,2]">
+      <div class="card shadow">
+        <img [src]="'assets/images/projects/andrew-complainer/' + i + '.PNG'" class="card-img-top">
+      </div>
+    </div>
+  </div>
+</div>

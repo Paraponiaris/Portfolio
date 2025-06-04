@@ -1,0 +1,26 @@
+<div class="container py-5">
+  <h1 class="text-center mb-5">EF Derma a Responsive Beauty Salon Website</h1>
+  
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <p>
+        This is a website I created for a client running his own Beauty Salon.
+      </p>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <h2 class="mb-4">Skills:</h2>
+      <p>Angular HTML5 CSS3 Bootstrap Typescript</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let i of [1,2,3,4,5,6]">
+      <div class="card shadow">
+        <img [src]="'assets/images/projects/ef-derma/' + i + '.PNG'" class="card-img-top">
+      </div>
+    </div>
+  </div>
+</div>

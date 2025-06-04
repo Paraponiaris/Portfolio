@@ -1,0 +1,12 @@
+#home {
+  background-color: #6c63ff; /* Or any color you prefer */
+  color: white;
+}
+
+.social-icons img {
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}

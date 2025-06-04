@@ -1,0 +1,45 @@
+<!-- app.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Androklis Paraponiaris</a>
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      (click)="isMenuCollapsed = !isMenuCollapsed"
+      [attr.aria-expanded]="!isMenuCollapsed" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" fragment="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" fragment="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/skills" fragment="skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/work" fragment="work">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" fragment="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <h3>Get in touch</h3>
+    <p>email: androparapo&commat;yahoo.com</p>
+    <p>www.linkedin.com/in/androklis-paraponiaris-337421223</p>
+    <p>https://github.com/Paraponiaris</p>
+    <p class="mt-3">&copy; 2023 Androklis Paraponiaris. All rights reserved.</p>
+  </div>
+</footer>

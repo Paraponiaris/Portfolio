@@ -1,0 +1,30 @@
+.card {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+h2 {
+  color: #6c63ff;
+  border-bottom: 2px solid #6c63ff;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+ul li {
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li:before {
+  content: "•";
+  color: #6c63ff;
+  position: absolute;
+  left: 0;
+}
