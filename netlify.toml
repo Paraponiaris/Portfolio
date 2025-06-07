@@ -1,0 +1,9 @@
+[build]
+    base = "PORTFOLIO"
+    command = "npm run build:prod"
+    publish = "dist/browser"
+
+    [[redirects]]
+    from = "/*"
+    to = "/src/app/home/home.component.html"
+    status = 200

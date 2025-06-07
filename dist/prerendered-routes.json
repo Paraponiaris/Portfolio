@@ -1,0 +1,15 @@
+{
+  "routes": {
+    "/": {},
+    "/about": {},
+    "/contact": {},
+    "/skills": {},
+    "/work": {},
+    "/work/andrew-complainer": {},
+    "/work/codepulse": {},
+    "/work/digital-tuner": {},
+    "/work/ef-derma": {},
+    "/work/exchange-subs": {},
+    "/work/todo-list": {}
+  }
+}
