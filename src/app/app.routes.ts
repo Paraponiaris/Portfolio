@@ -13,7 +13,8 @@ import { TodoListComponent } from './projects/todo-list/todo-list.component';
 import { DigitalTunerComponent } from './projects/digital-tuner/digital-tuner.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Force home as entry
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'work', component: ProjectsComponent },
